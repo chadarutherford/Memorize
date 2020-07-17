@@ -56,12 +56,9 @@
 		631ABAD224C24CF1009C2D2D /* Memorize */ = {
 			isa = PBXGroup;
 			children = (
-				631ABAD324C24CF1009C2D2D /* AppDelegate.swift */,
-				631ABAD524C24CF1009C2D2D /* SceneDelegate.swift */,
+				631ABAE724C24DE4009C2D2D /* Support */,
 				631ABAD724C24CF1009C2D2D /* ContentView.swift */,
-				631ABAD924C24CF2009C2D2D /* Assets.xcassets */,
 				631ABADE24C24CF2009C2D2D /* LaunchScreen.storyboard */,
-				631ABAE124C24CF2009C2D2D /* Info.plist */,
 				631ABADB24C24CF2009C2D2D /* Preview Content */,
 			);
 			path = Memorize;
@@ -73,6 +70,17 @@
 				631ABADC24C24CF2009C2D2D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		631ABAE724C24DE4009C2D2D /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				631ABAD324C24CF1009C2D2D /* AppDelegate.swift */,
+				631ABAD524C24CF1009C2D2D /* SceneDelegate.swift */,
+				631ABAD924C24CF2009C2D2D /* Assets.xcassets */,
+				631ABAE124C24CF2009C2D2D /* Info.plist */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +298,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Memorize/Preview Content\"";
 				DEVELOPMENT_TEAM = P7DFWNNEL3;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Memorize/Info.plist;
+				INFOPLIST_FILE = Memorize/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +319,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Memorize/Preview Content\"";
 				DEVELOPMENT_TEAM = P7DFWNNEL3;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Memorize/Info.plist;
+				INFOPLIST_FILE = Memorize/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
