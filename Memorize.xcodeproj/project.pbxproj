@@ -14,7 +14,7 @@
 		631ABAE024C24CF2009C2D2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631ABADE24C24CF2009C2D2D /* LaunchScreen.storyboard */; };
 		631ABAF424C26ED2009C2D2D /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631ABAF324C26ED2009C2D2D /* EmojiMemoryGame.swift */; };
 		631ABAF624C26FBD009C2D2D /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631ABAF524C26FBD009C2D2D /* MemoryGame.swift */; };
-		631ABAF824C26FED009C2D2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631ABAF724C26FED009C2D2D /* ContentView.swift */; };
+		631ABAF824C26FED009C2D2D /* EmojiMemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631ABAF724C26FED009C2D2D /* EmojiMemoryGameView.swift */; };
 		632CB3C224C4AEFE006AC1C6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632CB3C124C4AEFE006AC1C6 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		631ABAE124C24CF2009C2D2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		631ABAF324C26ED2009C2D2D /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 		631ABAF524C26FBD009C2D2D /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
-		631ABAF724C26FED009C2D2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		631ABAF724C26FED009C2D2D /* EmojiMemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGameView.swift; sourceTree = "<group>"; };
 		632CB3C124C4AEFE006AC1C6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,7 +110,7 @@
 		631ABAEC24C26792009C2D2D /* SwiftUI Views */ = {
 			isa = PBXGroup;
 			children = (
-				631ABAF724C26FED009C2D2D /* ContentView.swift */,
+				631ABAF724C26FED009C2D2D /* EmojiMemoryGameView.swift */,
 				632CB3C124C4AEFE006AC1C6 /* CardView.swift */,
 			);
 			path = "SwiftUI Views";
@@ -204,7 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				631ABAD424C24CF1009C2D2D /* AppDelegate.swift in Sources */,
-				631ABAF824C26FED009C2D2D /* ContentView.swift in Sources */,
+				631ABAF824C26FED009C2D2D /* EmojiMemoryGameView.swift in Sources */,
 				631ABAD624C24CF1009C2D2D /* SceneDelegate.swift in Sources */,
 				631ABAF624C26FBD009C2D2D /* MemoryGame.swift in Sources */,
 				632CB3C224C4AEFE006AC1C6 /* CardView.swift in Sources */,
