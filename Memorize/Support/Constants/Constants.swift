@@ -11,5 +11,5 @@ import UIKit
 enum Size {
 	static let cornerRadius: CGFloat = 10.0
 	static let lineWidth: CGFloat = 3.0
-	static let multiplier: CGFloat = 0.75
+	static let multiplier: CGFloat = 0.7
 }

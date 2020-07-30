@@ -10,6 +10,8 @@ import SwiftUI
 
 struct CardView: View {
 	
+	@State private var animatedBonusRemaining: Double = 0
+	
 	var card: MemoryGame<String>.Card
 	
 	var body: some View {
@@ -18,22 +20,38 @@ struct CardView: View {
 		}
 	}
 	
+	@ViewBuilder
 	private func body(for size: CGSize) -> some View {
-		ZStack {
-			if card.isFaceUp {
-				RoundedRectangle(cornerRadius: Size.cornerRadius)
-					.fill(Color.white)
-				RoundedRectangle(cornerRadius: Size.cornerRadius)
-					.stroke(lineWidth: Size.lineWidth)
-				Text(card.content)
-			} else {
-				if !card.isMatched {
-					RoundedRectangle(cornerRadius: Size.cornerRadius)
-						.fill()
+		if card.isFaceUp || !card.isMatched {
+			ZStack {
+				Group {
+					if card.isConsumingBonusTime {
+						Pie(startAngle: Angle.degrees(0 - 90), endAngle: Angle.degrees(-animatedBonusRemaining * 360 - 90), clockwise: true)
+							.onAppear {
+								startBonusTimeAnimation()
+							}
+					} else {
+						Pie(startAngle: Angle.degrees(0 - 90), endAngle: Angle.degrees(-card.bonusRemaining * 360 - 90), clockwise: true)
+					}
 				}
+				.padding(8)
+				.opacity(0.35)
+				
+				Text(card.content)
+					.font(Font.system(size: fontSize(for: size)))
+					.rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
+					.animation(card.isMatched ? Animation.linear(duration: 1).repeatForever(autoreverses: false) : .default)
 			}
+			.cardify(isFaceUp: card.isFaceUp)
+			.transition(.scale)
 		}
-		.font(Font.system(size: fontSize(for: size)))
+	}
+	
+	private func startBonusTimeAnimation() {
+		animatedBonusRemaining = card.bonusRemaining
+		withAnimation(.linear(duration: card.bonusTimeRemaining)) {
+			animatedBonusRemaining = 0
+		}
 	}
 	
 	private func fontSize(for size: CGSize) -> CGFloat {
