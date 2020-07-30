@@ -22,22 +22,13 @@ struct MemoryGame<CardContent> {
 	
 	mutating func choose(_ card: Card) {
 		print("Card chosen: \(card)")
-		let chosenIndex = index(of: card)
+		let chosenIndex = cards.firstIndex(matching: card)
 		cards[chosenIndex].isFaceUp.toggle()
-	}
-	
-	private func index(of card: Card) -> Int {
-		for index in 0 ..< cards.count {
-			if cards[index].id == card.id {
-				return index
-			}
-		}
-		return 0 // TODO: bogus!
 	}
 	
 	struct Card: Identifiable {
 		var id: Int
-		var isFaceUp: Bool = false
+		var isFaceUp: Bool = true
 		var isMatched: Bool = false
 		var content: CardContent
 	}
